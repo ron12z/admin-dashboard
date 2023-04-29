@@ -34,7 +34,23 @@ table {
 }
 
 /* Layout */
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 1fr 5fr / 1fr 4fr;
+}
 
+header {
+    background: lightblue;
+}
+
+.sidebar {
+    background: wheat;
+}
+
+.content {
+    background: lightpink;
+}
 
 
 /* Style */
