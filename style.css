@@ -56,6 +56,7 @@ table {
 	--ff-normal: "Libre Baskerville", serif;
 	--fw-normal: 400;
 	--fw-bold: 700;
+	--color-glass: hsl(0, 0%, 100%, 0.5);
 }
 
 body {
@@ -114,6 +115,12 @@ body section {
 	gap: 0.4rem;
 }
 
+.announcements {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	align-items: center;
+}
+
 .trendings {
 	display: grid;
 	grid-template-rows: repeat(4, 1fr);
@@ -166,9 +173,11 @@ body {
 	padding: 1rem;
 }
 
+/* Projects */
+
 .projects-cards .card {
 	border: none;
-	background: hsl(0, 0%, 100%, 0.5);
+	background: var(--color-glass);
 	border-radius: 1rem;
 }
 
@@ -196,16 +205,38 @@ body {
 	cursor: pointer;
 }
 
+/* Announcements and Trendings */
+
 .announcements-and-trendings {
 	padding-inline: 0.6rem;
 }
 
+.announcements,
 .trendings {
-	border: 2px solid orangered;
-	border-radius: 0.2rem;
+	background: var(--color-glass);
+	border-radius: 1rem;
+	padding: 1.5rem;
 }
 
-.announcements {
-	border: 2px solid purple;
-	border-radius: 0.2rem;
+/* Announcements */
+
+.announcement {
+	position: relative;
+	line-height: 1.45;
 }
+
+.announcement::after {
+	content: "";
+	background: rgba(0, 0, 0, 0.514);
+	position: absolute;
+	left: 10%;
+	bottom: -1.5rem;
+	height: 1px;
+	width: 80%;
+}
+
+.announcement:last-child::after {
+	display: none;
+}
+
+/* Trendings */
