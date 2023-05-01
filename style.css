@@ -62,7 +62,8 @@ table {
 body {
 	min-height: 100vh;
 	display: grid;
-	grid-template: 1fr 7fr / 1fr 6fr;
+	grid-template-columns: 1fr 6fr;
+	grid-auto-rows: min(minmax(min-content, 5fr));
 }
 
 body section {
@@ -74,15 +75,21 @@ body section {
 	display: grid;
 	grid-template: 1fr 1.5fr / 1.5fr 1fr;
 }
-.header > * {
-	outline: 1px solid black;
-}
+
 .header .searchbar {
 	display: flex;
 }
 
 .header img.icon {
 	width: 2rem;
+}
+
+.header img:not(.icon) {
+	border-radius: 50%;
+}
+
+.header .profile-icon-small {
+	scale: 0.8;
 }
 
 .sidebar {
@@ -131,7 +138,7 @@ body section {
 	flex-direction: column;
 	align-items: center;
 	gap: 0.5rem;
-	max-height: 40rem;
+	height: fit-content;
 }
 
 .announcements hr {
