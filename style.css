@@ -100,9 +100,11 @@ body {
 
 .header .profile-icon-small {
 	scale: 0.6;
+	cursor: pointer;
 }
 .header .profile-icon-big {
 	scale: 0.8;
+	cursor: pointer;
 }
 
 .header .profile {
@@ -110,6 +112,10 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	gap: 2rem;
+}
+
+.header .profile > * {
+	cursor: pointer;
 }
 
 .header .profile .name {
@@ -138,6 +144,8 @@ body {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	background: linear-gradient(135deg, lightblue, violet);
+	border-top: 1px solid hsl(210, 24%, 65%);
+	border-left: 1px solid hsl(210, 24%, 65%);
 }
 
 .content .projects-container {
@@ -323,6 +331,7 @@ body {
 /* Header */
 .header {
 	background: rgb(255, 248, 239);
+	border-left: 1px solid rgb(218, 212, 204);
 }
 
 .buttons {
