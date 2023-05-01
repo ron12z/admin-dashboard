@@ -62,22 +62,32 @@ table {
 body {
 	min-height: 100vh;
 	display: grid;
-	grid-template-columns: 1fr 6fr;
-	grid-auto-rows: min(minmax(min-content, 5fr));
-}
-
-body section {
-	outline: 1px solid black;
+	/* grid-template-columns: min(5rem, 1fr) 4.5fr;
+	grid-auto-rows: min(minmax(min-content, 5fr)); */
+	grid-template: auto 4fr/ 1fr 4fr;
 }
 
 .header {
 	grid-column: 2 / 3;
 	display: grid;
-	grid-template: 1fr 1.5fr / 1.5fr 1fr;
+	grid-template: auto 1fr / 2fr 1fr;
 }
 
 .header .searchbar {
 	display: flex;
+	gap: 0.5rem;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 1.4rem;
+}
+
+.header .searchbar input {
+	width: 80%;
+	background: hsl(0, 0%, 100%);
+	border: 1px solid gray;
+	height: 2rem;
+	border-radius: 0.5rem;
+	padding-inline: 1rem;
 }
 
 .header img.icon {
@@ -89,7 +99,35 @@ body section {
 }
 
 .header .profile-icon-small {
+	scale: 0.6;
+}
+.header .profile-icon-big {
 	scale: 0.8;
+}
+
+.header .profile {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2rem;
+}
+
+.header .profile .name {
+	font-size: 1.3rem;
+}
+
+.header .welcome {
+	display: flex;
+	align-items: center;
+	padding-inline: 1.4rem;
+	gap: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.header .welcome .greeting {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
 }
 
 .sidebar {
@@ -98,7 +136,7 @@ body section {
 
 .content {
 	display: grid;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 3fr 1fr;
 	background: linear-gradient(135deg, lightblue, violet);
 }
 
@@ -183,6 +221,14 @@ body section {
 
 body {
 	font-family: var(--ff-normal);
+}
+
+.header .welcome .greeting {
+	font-size: 1.2rem;
+}
+.header .welcome .greeting .user {
+	font-size: 1.4rem;
+	font-weight: 700;
 }
 
 .projects-title,
@@ -279,29 +325,29 @@ body {
 	background: rgb(255, 248, 239);
 }
 
-.header .searchbar {
-	display: flex;
-	gap: 0.5rem;
-	justify-content: flex-start;
-	align-items: center;
-	padding: 1.4rem;
-}
-
-.header .searchbar input {
-	width: 80%;
-	background: hsl(0, 0%, 100%);
-	border: 1px solid gray;
-	height: 2rem;
-	border-radius: 0.5rem;
-}
-.profile {
-	background: red;
-}
-
-.greetings {
-	background: orange;
-}
-
 .buttons {
-	background: lightblue;
+	display: flex;
+	gap: 1rem;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.buttons .button {
+	cursor: pointer;
+	width: 6rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid gray;
+	border-radius: 1rem;
+	background-color: rgb(154, 245, 245);
+	color: darkblue;
+	font-weight: 700;
+	transition: all 0.2s ease;
+}
+
+.buttons .button:hover {
+	background: rgb(136, 216, 216);
+	transition: all 0.2s ease;
 }
