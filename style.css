@@ -178,9 +178,12 @@ body {
 .announcement-title,
 .username {
 	font-weight: var(--fw-bold);
-	font-size: 1.15rem;
+	font-size: 1rem;
 }
 
+.content p {
+	font-size: 0.95rem;
+}
 /* Style */
 
 .projects-container,
