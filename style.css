@@ -200,6 +200,7 @@ body {
 	background: var(--color-glass);
 	backdrop-filter: blur(5px);
 	border-radius: 1rem;
+	border-left: 3px solid;
 }
 
 .projects-cards .card .card-title {
