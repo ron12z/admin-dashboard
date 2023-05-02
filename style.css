@@ -56,7 +56,8 @@ table {
 	--ff-normal: "Libre Baskerville", serif;
 	--fw-normal: 400;
 	--fw-bold: 700;
-	--color-glass: hsl(0, 0%, 100%, 0.5);
+	--color-glass: hsl(0, 0%, 100%, 0.4);
+	--color-glass-thick: hsl(0, 0%, 100%, 0.65)
 }
 
 body {
@@ -143,9 +144,6 @@ body {
 .content {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
-	background: linear-gradient(135deg, lightblue, violet);
-	border-top: 1px solid hsl(210, 24%, 65%);
-	border-left: 1px solid hsl(210, 24%, 65%);
 }
 
 .content .projects-container {
@@ -280,6 +278,7 @@ body {
 
 .projects-cards .card .card-title {
 	margin-bottom: 1rem;
+	line-height: 1.45;
 }
 
 .projects-cards .card .card-content {
@@ -326,14 +325,7 @@ body {
 	margin-bottom: 0.5rem;
 }
 
-/* Sidebar */
-
 /* Header */
-.header {
-	background: rgb(255, 248, 239);
-	border-left: 1px solid rgb(218, 212, 204);
-}
-
 .buttons {
 	display: flex;
 	gap: 1rem;
@@ -359,4 +351,18 @@ body {
 .buttons .button:hover {
 	background: rgb(136, 216, 216);
 	transition: all 0.2s ease;
+}
+
+
+body {
+	background: linear-gradient(135deg, lightblue, violet);
+}
+
+.header  {
+	background: var(--color-glass-thick);
+}
+
+/* Sidebar */
+.sidebar {
+	background: hsl(268, 25%, 57%);
 }
