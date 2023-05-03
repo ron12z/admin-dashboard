@@ -60,6 +60,7 @@ table {
 	--color-glass-thick: hsl(0, 0%, 100%, 0.65);
 	--color-ube: hsl(268, 32%, 62%);
 	--color-ube-sunog: hsl(267, 31%, 14%);
+	--color-accent-light: hsl(283, 88%, 74%);
 }
 
 body {
@@ -351,7 +352,7 @@ body {
 }
 
 .buttons .button:hover {
-	background: rgb(136, 216, 216);
+	background: var(--color-accent-light);
 	transition: all 0.2s ease;
 }
 
@@ -388,6 +389,33 @@ body {
 	display: flex;
 	gap: 1.4rem;
 	align-items: center;
+	cursor: pointer;
+	position: relative;
+}
+
+.primary-navigation .navigation-item::before,
+.tools-navigation .navigation-item::before {
+	content: "";
+	position: absolute;
+	top: -0.425rem;
+	left: -1rem;
+	width: 110%;
+	height: 140%;
+	background: var(--color-glass);
+	transform: scaleX(0);
+	transform-origin: 0;
+	transition: transform 0.2s ease;
+}
+
+.primary-navigation .navigation-item:hover::before,
+.tools-navigation .navigation-item:hover::before {
+	transform: scaleX(1);
+	transition: transform 0.5s ease;
+}
+
+.navigation-item img,
+.navigation-item h2 {
+	z-index: 1;
 }
 
 .primary-navigation ul,
