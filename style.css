@@ -346,7 +346,7 @@ body {
 	border: 1px solid gray;
 	border-radius: 1rem;
 	background-color: var(--color-ube);
-	color: var(--color-ube-sunog);
+	color: white;
 	font-weight: 700;
 	transition: all 0.2s ease;
 }
@@ -372,7 +372,7 @@ body {
 	padding: 2.5rem;
 	gap: 5rem;
 	font-weight: var(--fw-bold);
-	color: var(--color-ube-sunog);
+	color: rgb(255, 255, 255);
 }
 
 .sidebar img {
